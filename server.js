@@ -5,9 +5,9 @@ const app = express();
 
 //app.get('/', (req, res) => res.send('Hello World from Express!'))
 
-app.get("/paginaWeb", (req, res) => {
+app.get("paginaweb", (req, res) => {
    console.log(__dirname) 
-   res.sendFile(path.join(__dirname + "/paginaweb.html"));
+   res.sendFile(path.join(__dirname + "static/paginaweb.html"));
  });
 
 //-----------------------------------------------------------------------
