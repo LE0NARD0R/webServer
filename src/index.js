@@ -1,5 +1,6 @@
 const express = require('express');
 const engine = require('ejs-mate');
+const path = require('path');
 
 //initialization
 const app = express();
@@ -7,8 +8,10 @@ const app = express();
 //settings
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-app.get('/Views', (req, res) => {
+//routes
+app.get('/', (req, res) => {
     res.render('index');
 });
 
