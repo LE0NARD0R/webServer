@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 //routes
-app.use(require('./router/routes'));
+app.use(require('./routes/routes'));
 
 app.listen(8000, () => {
     console.log('Server on port 8000');
